@@ -40,4 +40,4 @@ $ kvm-vm-iplookup vm_name
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/mit) for details.
+This project is licensed under the [MIT License](./LICENSE).
