@@ -28,7 +28,7 @@ This will look up the IP address of the specified VM using the default status fi
 ### Specify a custom status file:
 
 ```
-$ kvm-vm-iplookup -f /path/to/custom/status/file <vm_name>
+$ kvm-vm-iplookup -status-file /path/to/custom/status/file <vm_name>
 ```
 
 ## Example

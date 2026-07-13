@@ -15,12 +15,24 @@ type VMInfo struct {
 	ExpiryTime int64  `json:"expiry-time"`
 }
 
+var (
+	version = "dev"
+	commit  = "none"
+	date    = "unknown"
+)
+
 func main() {
-	statusFile := flag.String("f", "/var/lib/libvirt/dnsmasq/virbr0.status", "Path to the status file")
+	statusFile := flag.String("status-file", "/var/lib/libvirt/dnsmasq/virbr0.status", "Path to the status file")
+	showVersion := flag.Bool("version", false, "Print version information and exit")
 	flag.Parse()
 
+	if *showVersion {
+		fmt.Printf("kvm-vm-iplookup %s (commit %s, built %s)\n", version, commit, date)
+		os.Exit(0)
+	}
+
 	if flag.NArg() < 1 {
-		fmt.Println("Usage: kvm-vm-iplookup [-f status_file] <vm_name>")
+		fmt.Println("Usage: kvm-vm-iplookup [-status-file path] <vm_name>")
 		os.Exit(1)
 	}
 
