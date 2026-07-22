@@ -7,14 +7,6 @@
 - Lookup IP addresses of KVM virtual machines by their names
 - Use a default status file location or specify a custom one
 
-## Installation
-
-Build the tool:
-
-```
-$ go build
-```
-
 ## Usage
 
 ### Basic usage:
